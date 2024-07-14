@@ -1,14 +1,24 @@
 import mongoose from "mongoose";
 
-const userSchema = mongoose.Schema({
-
-})
 
 const adminSchema = mongoose.Schema({
-
+    username: String,
+    password: String
 })
 
+const userSchema = mongoose.Schema({
+    username: String,
+    password: String,
+    purchasedCourses: [ {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Course'
+    } ]
+})
 const courseSchema = mongoose.Schema({
+    title: String,
+    description: String,
+    price: Number,
+    imageLink: String
 
 })
 
