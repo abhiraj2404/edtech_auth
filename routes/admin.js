@@ -3,7 +3,8 @@ import adminMiddleware from "../middleware/adminMiddleware.js";
 const router = Router();
 
 router.post('/signup', (req, res) => {
-
+    const username = req.body.username;
+    const password = req.body.password;
 })
 router.post('/courses', adminMiddleware, (req, res) => {
 
